@@ -1,19 +1,18 @@
 <?php
 
 // class declearation in dynamic
-class a{
-	private $a;
-	protected $b;
+class Calculator{
+	public $a;
+	public $b;
 
-	public function show($a,$b){
-		//return $res;
-
-		$res = $this->a+$this->b;
+	public function Sum($a){
+		$res = $this->a + $this->b;
+		return $res;
 	}
 }
 
-$obj = new a();
-echo $obj->show(10,20);
+$obj = new Calculator();
+echo $obj->Sum(10,20);
 
 
 
