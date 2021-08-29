@@ -25,7 +25,7 @@
         $numbers = new SimpleClass();
         //$numbers->input_two_no(10,20);
         //$numbers->the_sum();
-        $numbers->output_the_sum(10,20);
+        //$numbers->output_the_sum(10,20);
 
  
 
@@ -35,7 +35,7 @@
 
 
 //Base Class in Public
-/* class Base{
+class Base{
  	public $tagline = "Milan is a good boy!";
  	public function show(){
  		echo $this->tagline."<br>";
@@ -44,11 +44,11 @@
  //Child Class
  class Chiled extends Base{
  		public function dispaly(){
- 		echo $this->tagline;
+ 		echo $this->show();
  		}
  	}
  $obj= new Chiled();
- echo $obj->show();
+ //$obj->dispaly();
  
 //Base Class in Protected 
 Class Pro{
@@ -65,8 +65,8 @@ class Child extends Pro{
 }
 
 $objCal= new Child();
-$objCal->sub();
-$objCal->mul();*/
+//$objCal->sub();
+//$objCal->mul();
 
 
 
@@ -75,17 +75,18 @@ $objCal->mul();*/
 
 
 // Base Class
-/*class demo {
-    private $name1="A Computer Science Portal for Geeks!";
+class demo {
+    const name1="A Computer Science Portal for Geeks!";
       
     private function shows()
     {
-        echo "This is a fast class of private";
+    	echo self::name1;
+        //echo $this->name1;
     }
 } 
   
 // Sub Class
-class child23 {
+class child23  {
 	private $name="This is anther class of privat";
     function displays()
     {
@@ -94,13 +95,15 @@ class child23 {
 } 
   
 // Object Declaration
-$obj23= new child23;
+$obj23= new demo();
+
+$obj23->shows();
   
 // Uncaught Error: Call to private method demo::show()
-$obj23->shows(); 
+//$obj23->shows(); 
   
 //Undefined property: child::$name
-$obj23->displays(); */
+//$obj23->displays(); 
 
 
 
