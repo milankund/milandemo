@@ -71,8 +71,11 @@ $objCal->mul();
 
 
 
+//Private
+
+
 // Base Class
-class demo {
+/*class demo {
     private $name1="A Computer Science Portal for Geeks!";
       
     private function shows()
@@ -97,7 +100,24 @@ $obj23= new child23;
 $obj23->shows(); 
   
 //Undefined property: child::$name
-$obj23->displays(); 
+$obj23->displays(); */
+
+
+
+//Constructor
+
+class Cals {
+  public $n1;
+  public $n2;
+
+  function __construct($n1, $n2) {
+    $res= $this->n1 + $this->n2;
+   	echo  "The addition value is: ".$res;
+  }
+  
+}
+
+$objCal = new Cals(10,30);
 
 
 
