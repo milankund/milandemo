@@ -4,28 +4,28 @@
     class SimpleClass{
 
 
-        var $number1;
-        var $number2;
+        public $number1;
+        public $number2;
 
-        public function input_two_no($num1,$num2){
+        /*public function __construct($num1,$num2){
             $this->number1=$num1;
             $this->number2=$num2;
-        }
+        }*/
 
         public function the_sum(){
-            $total = $number1+$number2;
-            return $total;
+            $total = $this->number1+$this->number2;
+            echo $total;
         }
 
-        public function output_the_sum(){
-            echo $total;
+        public function output_the_sum($num1,$num2){
+            echo $total=$num1+$num2;
         }
   }
 
         $numbers = new SimpleClass();
-        $numbers->input_two_no(10,20);
-        $numbers->the_sum();
-        $numbers->output_the_sum();
+        //$numbers->input_two_no(10,20);
+        //$numbers->the_sum();
+        $numbers->output_the_sum(10,20);
 
  
 
@@ -35,7 +35,7 @@
 
 
 //Base Class in Public
- class Base{
+/* class Base{
  	public $tagline = "Milan is a good boy!";
  	public function show(){
  		echo $this->tagline."<br>";
@@ -66,7 +66,7 @@ class Child extends Pro{
 
 $objCal= new Child();
 $objCal->sub();
-$objCal->mul();
+$objCal->mul();*/
 
 
 
@@ -106,7 +106,7 @@ $obj23->displays(); */
 
 //Constructor
 
-class Cals {
+/*class Cals {
   public $n1;
   public $n2;
 
@@ -117,7 +117,7 @@ class Cals {
   
 }
 
-$objCal = new Cals(10,30);
+$objCal = new Cals(10,30);*/
 
 
 
